@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Seleção de Estado</title>
+</head>
+<body>
+
+<h2>Selecione um estado:</h2>
+
+<form action="/cidades" method="post">
+    <select name="estadoId">
+        <option th:each="estado : ${estados}" th:value="${estado.id}" th:text="${estado.nome}"></option>
+    </select>
+    <button type="submit">Listar Cidades</button>
+</form>
+
+</body>
+</html>
